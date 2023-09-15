@@ -1,0 +1,27 @@
+---
+const { content = { title: "" } } = Astro.props;
+---
+
+<html
+  lang="en"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{content.title ? `${content.title} - Gyandhan` : "Gyandhan"}</title>
+  </head>
+
+  <body class="text-gd-gray-800 font-figtree scroll-smooth">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Figtree";
+    src: url("/assets/fonts/Figtree-VariableFont_wght.ttf");
+    font-style: normal;
+  }
+</style>
