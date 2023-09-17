@@ -1,18 +1,18 @@
 ---
-const { imgSrc, heading, content,href } = Astro.props;
+const { imgSrc, heading, content,href,border } = Astro.props;
 ---
 
-<div class="flex flex-col w-auto h-full md:h-80 bg-[#C4EE9A] p-2.5 md:p-2 rounded-lg shadow-gd-sm">
+<div class=`flex flex-col w-auto h-full border-4 ${border} p-1 rounded-lg shadow-gd-sm`>
     <div class="w-full flex item-center">
-    <img src={imgSrc} class="object-cover"/>
+    <img src={imgSrc} class="h-32 md:h-48 w-full object-contain md:object-cover"/>
     </div>
     <div class="w-full pt-2 md:pr-4">
         <div>
             <p class="font-bold text-base md:text-2xl pt-2 md:pb-2">{heading}</p>
             <span class="text-sm text-gd-gray-300 md:text-black">{content}</span>
         </div>
-        <div class="hidden md:flex justify-center items-end lg:justify-end ">
-            <a href={href} class="flex w-fit items-center rounded px-2 text-sm font-bold text-black hover:underline cursor-pointer hover:bg-purple-200 lg:py-2 lg:text-base">
+        <div class="flex items-end justify-end ">
+            <a href={href} class="flex w-fit items-center rounded px-2 text-sm font-bold text-black hover:underline cursor-pointer hover:bg-stone-200 lg:py-2 lg:text-base">
                 Know More
                 <img src="../images/caret-right.svg" class="pl-2"/>
             </a>
