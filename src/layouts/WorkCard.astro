@@ -1,9 +1,9 @@
 ---
-const { imgSrc, heading, content, href, border } = Astro.props;
+const { imgSrc, heading, content, href, border,bgcolor } = Astro.props;
 ---
 
 <div
-  class=`flex flex-col w-auto h-full border-4 ${border} p-1 rounded-lg shadow-gd-sm`
+  class=`flex flex-col w-auto h-full  border-4  ${border} ${bgcolor} p-1 rounded-lg shadow-gd-sm`
 >
   <div class="w-full flex item-center">
     <img
@@ -11,7 +11,7 @@ const { imgSrc, heading, content, href, border } = Astro.props;
       class="h-32 md:h-48 w-full object-contain md:object-cover"
     />
   </div>
-  <div class="w-full pt-2 md:pr-4">
+  <div class="bg-white w-full pt-2 md:pr-4 px-2">
     <div>
       <p class="font-bold text-base md:text-2xl pt-2 md:pb-2">{heading}</p>
       <span class="text-sm text-gd-gray-300 md:text-black line-clamp-2"
