@@ -1,5 +1,55 @@
 ---
 import WorkCard from "../layouts/WorkCard.astro";
+const projects = [
+  {
+    heading: "GyanDhan Website",
+    imgSrc: "gyandhan-home.png",
+    content:
+      "Developed a dynamic and responsive website for Gyandhan, a leading company in education loans, showcasing their services and enhancing their online presence. The project utilized modern web development technologies, including Figma for design, Tailwind CSS for styling, JavaScript for interactivity, HTML for markup, CSS for styling, and Ruby on Rails.",
+    href: "https://astro-gyandhan.vercel.app/",
+    border: "border-[#81C042]",
+  },
+  {
+    heading: "Online parking Application",
+    imgSrc: "online-parking.png",
+    content:
+      "An intuitive online parking app, crafted with React, Redux, and CSS, simplifying parking spot booking and management.",
+    href: "https://online-parking.vercel.app/",
+    border: "border-blue-350",
+  },
+  {
+    heading: "Wordle Game Application",
+    imgSrc: "wordle.png",
+    content:
+      "A classic Wordle word guessing game showcasing my React and CSS skills. Players can guess a randomly generated word within a limited number of attempts. The interface provides visual feedback, and the game is designed to be responsive with a visually appealing layout.",
+    href: "https://wordle-lilac-zeta.vercel.app/",
+    border: "border-gray-300",
+  },
+  {
+    heading: "To do Web application",
+    imgSrc: "todo-list.png",
+    content:
+      "Built a stylish and efficient to-do list using React, Tailwind CSS, and Material-UI, illustrating a knack for creating visually appealing and responsive web applications.",
+    href: "https://tick-task-1.vercel.app/",
+    border: "border-[#5e0087]",
+  },
+  {
+    heading: "Clay Website",
+    imgSrc: "clay-clone.png",
+    content:
+      "A Vite-powered React website, styled with Tailwind CSS, that closely mimics the appearance and functionality of an existing site, offering a responsive and streamlined user experience.",
+    href: "https://clay-clone.vercel.app/",
+    border: "border-[#E3763A]",
+  },
+  {
+    heading: "Text Utility Application",
+    imgSrc: "text-utility.png",
+    content:
+      "Simplify text tasks using a responsive React.js text utility application.",
+    href: "https://shristi-gupta21.github.io/TextUtilityApp/",
+    border: "border-indigo-500",
+  },
+];
 ---
 
 <section class="max-w-6xl pt-20 mx-auto">
@@ -7,48 +57,16 @@ import WorkCard from "../layouts/WorkCard.astro";
   <div
     class="py-12 grid md:grid-cols-2 gap-4 md:gap-9 max-w-6xl mx-auto px-4 xl:px-0"
   >
-    <WorkCard
-      heading="GyanDhan Website"
-      imgSrc="../projects/gyandhan-home.png"
-      content="Developed a dynamic and responsive website for Gyandhan, a leading company in education loans, showcasing their services and enhancing their online presence. The project utilized modern web development technologies, including Figma for design, Tailwind CSS for styling, JavaScript for interactivity, HTML for markup, CSS for styling, and Ruby on Rails."
-      href="https://astro-gyandhan.vercel.app/"
-      border="border-[#81C042]"
-    />
-    <WorkCard
-      heading="Online parking Application"
-      imgSrc="../projects/online-parking.png"
-      content="An intuitive online parking app, crafted with React, Redux, and CSS, simplifying parking spot booking and management."
-      href="https://online-parking.vercel.app/"
-      border="border-blue-350"
-    />
-    <WorkCard
-      heading="Wordle Game Application"
-      imgSrc="../projects/wordle.png"
-      content="A classic Wordle word guessing game showcasing my React and CSS skills. Players can guess a randomly generated word within a limited number of attempts. The interface provides visual feedback, and the game is designed to be responsive with a visually appealing layout."
-      href="https://wordle-lilac-zeta.vercel.app/"
-      border="border-gray-300"
-    />
-    <WorkCard
-      heading="To do Web application"
-      imgSrc="../projects/todo-list.png"
-      content="Built a stylish and efficient to-do list using React, Tailwind CSS, and Material-UI, illustrating a knack for creating visually appealing and responsive web applications."
-      href="https://tick-task-1.vercel.app/"
-      border="border-[#5e0087]"
-    />
-
-    <WorkCard
-      heading="Clay Website"
-      imgSrc="../projects/clay-clone.png"
-      content="A Vite-powered React website, styled with Tailwind CSS, that closely mimics the appearance and functionality of an existing site, offering a responsive and streamlined user experience."
-      href="https://clay-clone.vercel.app/"
-      border="border-[#E3763A]"
-    />
-    <WorkCard
-      heading="Text Utility Application"
-      imgSrc="../projects/text-utility.png"
-      content="Simplify text tasks using a responsive React.js text utility application."
-      href="https://shristi-gupta21.github.io/TextUtilityApp/"
-      border="border-indigo-500"
-    />
+    {
+      projects.map(({ heading, imgSrc, content, href, border }) => (
+        <WorkCard
+          heading={heading}
+          imgSrc={imgSrc}
+          content={content}
+          href={href}
+          border={border}
+        />
+      ))
+    }
   </div>
 </section>
