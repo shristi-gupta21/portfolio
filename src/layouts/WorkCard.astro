@@ -40,12 +40,16 @@ switch (color) {
     <div class="flex flex-wrap gap-x-2 gap-y-2 md:gap-y-0">
       {tags?.map((tag) => <Tag title={tag} color={color} />)}
     </div>
-    <div>
-      <p class="font-bold text-base md:text-2xl pt-2 md:pt-4 md:pb-2">
+    <div class="pt-2 md:pt-4 md:pb-2">
+      <a
+        href={href}
+        target="_blank"
+        class="hover:border-b-2 hover:border-b-black hover:transition hover:duration-700 cursor-pointer font-bold text-base md:text-2xl"
+      >
         {heading}
-      </p>
+      </a>
       <span
-        class="text-sm text-gd-gray-300 min-h-[2.5rem] md:text-black line-clamp-2"
+        class="text-sm text-gd-gray-300 min-h-[2.5rem] md:text-black line-clamp-2 pt-2"
         >{content}</span
       >
     </div>
@@ -54,9 +58,13 @@ switch (color) {
         <a
           href={href}
           target="_blank"
-          class="flex w-fit items-center rounded px-2 text-sm font-bold text-black hover:underline hover:transition hover:duration-1000 cursor-pointer hover:bg-stone-200 lg:py-2 lg:text-base"
+          class="flex w-fit items-center h-10 rounded px-2 text-sm font-bold text-black hover:transition hover:duration-700 cursor-pointer hover:bg-stone-200 lg:py-1.5 lg:text-base"
         >
-          Know More
+          <p
+            class="hover:border-b-2 hover:border-b-black hover:transition hover:duration-700"
+          >
+            Know More
+          </p>
           <img src="../icons/caret-right.svg" class="pl-2" />
         </a>
       </button>
