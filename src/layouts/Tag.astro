@@ -1,0 +1,32 @@
+---
+const { title, color } = Astro.props;
+let bgColor = "";
+switch (color) {
+  case "green":
+    bgColor = "bg-green-200";
+    break;
+  case "blue":
+    bgColor = "bg-blue-350";
+    break;
+  case "gray":
+    bgColor = "bg-gray-300";
+    break;
+  case "purple":
+    bgColor = "bg-purple-400";
+    break;
+  case "orange":
+    bgColor = "bg-orange-200";
+    break;
+  case "indigo":
+    bgColor = "bg-indigo-500";
+    break;
+  default:
+    bgColor = "bg-gray-200";
+}
+---
+
+<div
+  class=`text-sm font-medium py-1 px-3 border shadow-md rounded-full ${bgColor}`
+>
+  {title}
+</div>

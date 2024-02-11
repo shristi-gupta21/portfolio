@@ -1,9 +1,35 @@
 ---
-const { imgSrc, heading, content, href, border, bgcolor } = Astro.props;
+import Tag from "./Tag.astro";
+const { imgSrc, heading, content, href, color, tags } = Astro.props;
+
+let border = "";
+switch (color) {
+  case "green":
+    border = "border-green-200";
+    break;
+  case "blue":
+    border = "border-blue-350";
+    break;
+  case "gray":
+    border = "border-gray-300";
+    break;
+  case "purple":
+    border = "border-purple-400";
+    break;
+  case "orange":
+    border = "border-orange-200";
+    break;
+  case "indigo":
+    border = "border-indigo-500";
+    break;
+  default:
+    border = "border-gray-200";
+}
+// console.log(color);
 ---
 
 <div
-  class=`flex flex-col w-auto h-full  border-4  ${border} ${bgcolor} p-1 rounded-lg shadow-gd-sm`
+  class=`flex flex-col w-auto h-full  border-4  ${border}  p-1 rounded-lg shadow-gd-sm`
 >
   <div class="w-full flex item-center">
     <img
@@ -11,7 +37,10 @@ const { imgSrc, heading, content, href, border, bgcolor } = Astro.props;
       class="h-32 md:h-48 w-full object-contain md:object-cover"
     />
   </div>
-  <div class="bg-white w-full pt-2 md:pr-4 px-2">
+  <div class="w-full pt-2 md:pr-4 px-2">
+    <div class="flex gap-x-2">
+      {tags?.map((tag) => <Tag title={tag} color={color} />)}
+    </div>
     <div>
       <p class="font-bold text-base md:text-2xl pt-2 md:pb-2">{heading}</p>
       <span

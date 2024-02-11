@@ -7,7 +7,7 @@ const projects = [
     content:
       "Developed a dynamic and responsive website for Gyandhan, a leading company in education loans, showcasing their services and enhancing their online presence. The project utilized modern web development technologies, including Figma for design, Tailwind CSS for styling, JavaScript for interactivity, HTML for markup, CSS for styling, and Ruby on Rails.",
     href: "https://astro-gyandhan.vercel.app/",
-    border: "border-[#81C042]",
+    color: "green",
   },
   {
     heading: "Online parking Application",
@@ -15,7 +15,8 @@ const projects = [
     content:
       "An intuitive online parking app, crafted with React, Redux, and CSS, simplifying parking spot booking and management.",
     href: "https://online-parking.vercel.app/",
-    border: "border-blue-350",
+    color: "blue",
+    tags: ["React JS", "Tailwind CSS"],
   },
   {
     heading: "Wordle Game Application",
@@ -23,7 +24,7 @@ const projects = [
     content:
       "A classic Wordle word guessing game showcasing my React and CSS skills. Players can guess a randomly generated word within a limited number of attempts. The interface provides visual feedback, and the game is designed to be responsive with a visually appealing layout.",
     href: "https://wordle-lilac-zeta.vercel.app/",
-    border: "border-gray-300",
+    color: "gray",
   },
   {
     heading: "To do Web application",
@@ -31,7 +32,7 @@ const projects = [
     content:
       "Built a stylish and efficient to-do list using React, Tailwind CSS, and Material-UI, illustrating a knack for creating visually appealing and responsive web applications.",
     href: "https://tick-task-1.vercel.app/",
-    border: "border-[#5e0087]",
+    color: "purple",
   },
   {
     heading: "Clay Website",
@@ -39,7 +40,7 @@ const projects = [
     content:
       "A Vite-powered React website, styled with Tailwind CSS, that closely mimics the appearance and functionality of an existing site, offering a responsive and streamlined user experience.",
     href: "https://clay-clone.vercel.app/",
-    border: "border-[#E3763A]",
+    color: "orange",
   },
   {
     heading: "Text Utility Application",
@@ -47,7 +48,7 @@ const projects = [
     content:
       "Simplify text tasks using a responsive React.js text utility application.",
     href: "https://shristi-gupta21.github.io/TextUtilityApp/",
-    border: "border-indigo-500",
+    color: "indigo",
   },
 ];
 ---
@@ -58,13 +59,14 @@ const projects = [
     class="py-12 grid md:grid-cols-2 gap-4 md:gap-9 max-w-6xl mx-auto px-4 xl:px-0"
   >
     {
-      projects.map(({ heading, imgSrc, content, href, border }) => (
+      projects.map(({ heading, imgSrc, content, href, color, tags }) => (
         <WorkCard
           heading={heading}
           imgSrc={imgSrc}
           content={content}
           href={href}
-          border={border}
+          color={color}
+          tags={tags}
         />
       ))
     }
