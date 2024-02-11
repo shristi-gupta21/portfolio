@@ -1,6 +1,7 @@
 ---
 const { title, color } = Astro.props;
 let bgColor = "";
+let textColor = "text-black";
 switch (color) {
   case "green":
     bgColor = "bg-green-200";
@@ -13,6 +14,7 @@ switch (color) {
     break;
   case "purple":
     bgColor = "bg-purple-400";
+    textColor = "text-white";
     break;
   case "orange":
     bgColor = "bg-orange-200";
@@ -26,7 +28,7 @@ switch (color) {
 ---
 
 <div
-  class=`text-sm font-medium py-1 px-3 border shadow-md rounded-full ${bgColor}`
+  class=`text-sm font-medium py-1 px-3 border shadow rounded-full ${bgColor} ${textColor}`
 >
   {title}
 </div>
