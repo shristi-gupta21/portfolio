@@ -10,6 +10,9 @@ module.exports = {
         "purple-400": "#5e0087",
         "orange-200": "#E3763A",
       },
+      fontSize: {
+        "1.5xl": "22px",
+      },
     },
   },
   plugins: [],
