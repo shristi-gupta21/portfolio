@@ -1,3 +1,13 @@
+---
+import Skill from "../layouts/Skill.astro";
+const skills = [
+  {
+    image: "HTML5.svg.png",
+    heading: "HTML",
+  },
+];
+---
+
 <section class="max-w-6xl py-20 md:py-40 mx-auto">
   <h1 class="text-3xl md:text-6xl font-bold text-center">About Me</h1>
   <p class="text-center my-10">
@@ -7,7 +17,7 @@
       can learn about my current skills.
     </span>
   </p>
-  <div class="py-5 flex">
+  <div class="py-5 flex gap-x-12">
     <div class="w-1/2">
       <p class="pb-5 text-3xl font-semibold">Get to know me!</p>
       <p class="text-xl text-justify">
@@ -30,6 +40,15 @@
         >!
       </p>
     </div>
-    <div class="w-1/2"></div>
+    <div class="w-1/2">
+      <p class="pb-5 text-3xl font-semibold">Skills</p>
+      <div class="flex gap-x-4">
+        {
+          skills.map(({ image, heading }) => (
+            <Skill imageName={image} heading={heading} />
+          ))
+        }
+      </div>
+    </div>
   </div>
 </section>
