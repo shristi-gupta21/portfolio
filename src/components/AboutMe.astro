@@ -5,49 +5,87 @@ const skills = [
     image: "HTML5.svg.png",
     heading: "HTML",
   },
+  {
+    image: "css.png",
+    heading: "CSS",
+  },
+  {
+    image: "react.svg.png",
+    heading: "React JS",
+  },
+  {
+    image: "javascript.svg",
+    heading: "JavaScript",
+  },
+  {
+    image: "tailwind.svg",
+    heading: "Tailwind CSS",
+  },
+  {
+    image: "java.webp",
+    heading: "Java",
+  },
+  {
+    image: "responsive-design.svg",
+    heading: "Responsive Design",
+  },
+  {
+    image: "github.png",
+    heading: "GitHub",
+  },
+  {
+    image: "git.png",
+    heading: "GIT",
+  },
+  {
+    image: "visual-studio-code.svg.png",
+    heading: "Visual Studio Code",
+  },
 ];
 ---
 
-<section class="max-w-6xl py-20 md:py-40 mx-auto">
-  <h1 class="text-3xl md:text-6xl font-bold text-center">About Me</h1>
-  <p class="text-center my-10">
-    <span class="text-2xl font-medium">Hey there!</span>
-    <span class="text-xl">
-      A tech aficionado deeply immersed in programming and technology. Here you
-      can learn about my current skills.
-    </span>
-  </p>
-  <div class="py-5 flex gap-x-12">
-    <div class="w-1/2">
-      <p class="pb-5 text-3xl font-semibold">Get to know me!</p>
-      <p class="text-xl text-justify">
-        I'm a passionate front-end developer dedicated to crafting engaging and
-        user-friendly web experiences. With a keen eye for design and a love for
-        clean, efficient code, I specialize in bringing concepts to life through
+<section class="bg-[url(/waves/wavy-3.svg)]">
+  <div class="max-w-6xl mx-auto my-16 md:my-28 py-5 md:py-10">
+    <h1 class="text-3xl md:text-6xl font-bold text-center">About Me</h1>
+    <p class="text-center my-10">
+      <span class="text-2xl font-medium">Hey there!</span>
+      <span class="text-xl">
+        A tech aficionado deeply immersed in programming and technology. Here
+        you can learn about my current skills.
+      </span>
+    </p>
+    <div class="py-5 flex gap-x-12">
+      <div class="w-1/2">
+        <p class="pb-5 text-3xl font-semibold">Get to know me!</p>
+        <p class="text-xl text-justify">
+          I'm a passionate front-end developer dedicated to crafting engaging
+          and user-friendly web experiences. With a keen eye for design and a
+          love for clean, efficient code, I specialize in bringing concepts to
+          life through
 
-
-        <span class="font-medium text-gray-700 text-1.5xl">HTML</span>,<span
-          class="font-medium text-gray-700 text-1.5xl"
-        >
-          CSS</span
-        > , and <span class="font-medium text-gray-700 text-1.5xl"
-          >JavaScript</span
-        >. Whether it's creating responsive layouts or optimizing performance,
-        I'm driven by the challenge of turning ideas into reality. Let's
-        collaborate and build something amazing together on <a
-          href="https://www.linkedin.com/in/shristi-gupta-b496191b4/"
-          class="font-medium text-cyan-700 text-1.5xl">LinkedIn</a
-        >!
-      </p>
-    </div>
-    <div class="w-1/2">
-      <p class="pb-5 text-3xl font-semibold">Skills</p>
-      <div class="flex gap-x-4">
-        {
-          skills.map(({ image, heading }) => (
-            <Skill imageName={image} heading={heading} />
-          ))
-        }
+          <span class="font-medium text-gray-700 text-1.5xl">HTML</span>,<span
+            class="font-medium text-gray-700 text-1.5xl"
+          >
+            CSS</span
+          > , and <span class="font-medium text-gray-700 text-1.5xl"
+            >JavaScript</span
+          >. Whether it's creating responsive layouts or optimizing performance,
+          I'm driven by the challenge of turning ideas into reality. Let's
+          collaborate and build something amazing together on <a
+            href="https://www.linkedin.com/in/shristi-gupta-b496191b4/"
+            class="font-medium text-cyan-700 text-1.5xl">LinkedIn</a
+          >!
+        </p>
+      </div>
+      <div class="w-1/2">
+        <p class="pb-5 text-3xl font-semibold">Skills</p>
+        <div class="flex gap-4 flex-wrap">
+          {
+            skills.map(({ image, heading }) => (
+              <Skill imageName={image} heading={heading} />
+            ))
+          }
+        </div>
       </div>
     </div>
   </div>
