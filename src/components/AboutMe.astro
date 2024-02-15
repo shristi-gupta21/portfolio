@@ -45,40 +45,40 @@ const skills = [
 ---
 
 <section class="bg-[url(/waves/wavy-3.svg)]">
-  <div class="max-w-6xl mx-auto my-16 md:my-28 py-5 md:py-10">
+  <div class="max-w-6xl mx-auto py-5 my-20 md:my-28 md:py-10 px-4 md:px-0">
     <h1 class="text-3xl md:text-6xl font-bold text-center">About Me</h1>
-    <p class="text-center my-10">
-      <span class="text-2xl font-medium">Hey there!</span>
-      <span class="text-xl">
+    <p class="text-center my-8 md:my-10">
+      <span class="text-xl md:text-2xl font-medium">Hey there!</span>
+      <span class="md:text-xl">
         A tech aficionado deeply immersed in programming and technology. Here
         you can learn about my current skills.
       </span>
     </p>
-    <div class="py-5 flex gap-x-12">
-      <div class="w-1/2">
-        <p class="pb-5 text-3xl font-semibold">Get to know me!</p>
-        <p class="text-xl text-justify">
+    <div class="py-5 flex flex-col md:flex-row gap-y-10 md:gap-x-12">
+      <div class="md:w-1/2">
+        <p class="pb-5 text-xl md:text-4xl font-semibold">Get to know me!</p>
+        <p class="md:text-xl text-justify">
           I'm a passionate front-end developer dedicated to crafting engaging
           and user-friendly web experiences. With a keen eye for design and a
           love for clean, efficient code, I specialize in bringing concepts to
           life through
 
-          <span class="font-medium text-gray-700 text-1.5xl">HTML</span>,<span
-            class="font-medium text-gray-700 text-1.5xl"
-          >
+          <span class="font-medium text-gray-700 text-lg md:text-1.5xl"
+            >HTML</span
+          >,<span class="font-medium text-gray-700 text-lg md:text-1.5xl">
             CSS</span
-          > , and <span class="font-medium text-gray-700 text-1.5xl"
+          > , and <span class="font-medium text-gray-700 text-lg md:text-1.5xl"
             >JavaScript</span
           >. Whether it's creating responsive layouts or optimizing performance,
           I'm driven by the challenge of turning ideas into reality. Let's
           collaborate and build something amazing together on <a
             href="https://www.linkedin.com/in/shristi-gupta-b496191b4/"
-            class="font-medium text-cyan-700 text-1.5xl">LinkedIn</a
+            class="font-medium text-cyan-700 text-lg md:text-1.5xl">LinkedIn</a
           >!
         </p>
       </div>
-      <div class="w-1/2">
-        <p class="pb-5 text-3xl font-semibold">Skills</p>
+      <div class="md:w-1/2">
+        <p class="pb-5 text-xl md:text-4xl font-semibold">Skills</p>
         <div class="flex gap-4 flex-wrap">
           {
             skills.map(({ image, heading }) => (
