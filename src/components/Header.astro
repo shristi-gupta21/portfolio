@@ -107,12 +107,16 @@ import Main from "../layouts/Main.astro";
 </Main>
 <script>
   const closeBtn = document.getElementById("close-btn");
-  document.querySelector(".header").style.display = "none";
+  const header = document.querySelector(".header");
+  header.style.display = "none";
   closeBtn.addEventListener("click", () => {
-    document.querySelector(".header").style.display = "none";
+    header.style.display = "none";
   });
   const openBtn = document.getElementById("open-btn");
   openBtn.addEventListener("click", () => {
-    document.querySelector(".header").style.display = "";
+    header.style.display = "";
+  });
+  document.querySelector("button").addEventListener("click", () => {
+    header.style.display = "none";
   });
 </script>
