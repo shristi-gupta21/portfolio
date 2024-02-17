@@ -50,7 +50,7 @@ const projects = [
     heading: "Text Utility Application",
     imgSrc: "text-utility.png",
     content:
-      "Simplify text tasks using a responsive React.js text utility application.",
+      "Simplify text tasks using a responsive React.js text utility application.Features include text transformation, character counting, clear text, remove extra space and many more",
     href: "https://shristi-gupta21.github.io/TextUtilityApp/",
     color: "indigo",
     tags: ["React JS", "CSS", "BootStrap", "HTML"],
@@ -66,8 +66,9 @@ const projects = [
     class="py-12 grid md:grid-cols-2 gap-4 md:gap-9 max-w-6xl mx-auto px-4 xl:px-0"
   >
     {
-      projects.map(({ heading, imgSrc, content, href, color, tags }) => (
+      projects.map(({ heading, imgSrc, content, href, color, tags }, index) => (
         <WorkCard
+          id={"work-" + index}
           heading={heading}
           imgSrc={imgSrc}
           content={content}
