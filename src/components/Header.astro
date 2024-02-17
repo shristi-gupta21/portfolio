@@ -16,6 +16,11 @@ import Main from "../layouts/Main.astro";
       </div>
       <div class="hidden lg:flex lg:gap-x-24">
         <a
+          href="/"
+          class="text-lg font-semibold leading-6 text-gray-900 uppercase"
+          >home</a
+        >
+        <a
           href="#about-me"
           class="text-lg font-semibold leading-6 text-gray-900 uppercase"
           >About</a
@@ -55,11 +60,11 @@ import Main from "../layouts/Main.astro";
       </div>
     </nav>
     <div class="lg:hidden header" role="dialog" aria-modal="true">
-      <div class="fixed inset-0 z-10"></div>
+      <div class="fixed inset-0 z-10 bg-black/60"></div>
       <div
-        class="h-fit fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-gray-200 px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        class="h-fit fixed inset-y-0 right-0 z-20 w-full overflow-y-auto bg-gray-100 px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
       >
-        <div class="flex justify-between gap-x-6">
+        <div class="flex justify-between">
           <a href="/" class="-m-1.5 p-1.5">
             <span class="sr-only">Shristi Gupta</span>
             <img class="h-10 w-auto" src="/icons/s-icon.png" alt="" />
@@ -89,18 +94,26 @@ import Main from "../layouts/Main.astro";
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
               <a
+                href="/"
+                class="home -mx-3 block rounded-lg px-3 py-2 text-base uppercase font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Home</a
+              >
+              <div class="w-full h-px bg-black"></div>
+              <a
                 href="#about-me"
-                class="about-me -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                class="about-me -mx-3 block rounded-lg px-3 py-2 text-base uppercase font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >About</a
               >
+              <div class="w-full h-px bg-black"></div>
               <a
                 href="#my-work"
-                class="work -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                class="work -mx-3 block rounded-lg px-3 py-2 text-base uppercase font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >Work</a
               >
+              <div class="w-full h-px bg-black"></div>
               <a
                 href="#contact"
-                class="contact -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                class="contact -mx-3 block rounded-lg px-3 py-2 uppercase text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >Contact</a
               >
             </div>
@@ -113,24 +126,32 @@ import Main from "../layouts/Main.astro";
 <script>
   const closeBtn = document.getElementById("close-btn");
   const header = document.querySelector(".header");
-  header.style.display = "none";
+  hide();
   closeBtn.addEventListener("click", () => {
-    header.style.display = "none";
+    hide();
   });
   const openBtn = document.getElementById("open-btn");
   openBtn.addEventListener("click", () => {
-    header.style.display = "";
+    show();
   });
-  document.querySelector("button").addEventListener("click", () => {
-    header.style.display = "none";
-  });
+
   document.querySelector(".about-me").addEventListener("click", () => {
-    header.style.display = "none";
+    hide();
   });
   document.querySelector(".work").addEventListener("click", () => {
-    header.style.display = "none";
+    hide();
   });
   document.querySelector(".contact").addEventListener("click", () => {
-    header.style.display = "none";
+    hide();
   });
+
+  function hide() {
+    header.style.display = "none";
+    document.querySelector("body").style.overflow = "";
+  }
+
+  function show() {
+    header.style.display = "";
+    document.querySelector("body").style.overflow = "hidden";
+  }
 </script>
