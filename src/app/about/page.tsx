@@ -88,7 +88,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="flex justify-end lg:pl-20">
+        <div className="flex lg:justify-end lg:pl-20">
           <ul role="list">
             <SocialLink
               href="https://www.instagram.com/shristi._gupta._/"
