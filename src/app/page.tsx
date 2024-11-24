@@ -11,7 +11,7 @@ import {
   LinkedInIcon,
 } from '@/components/SocialIcons'
 
-import image1 from '@/images/photos/image-1.avif'
+import image1 from '@/images/photos/image-1.png'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
