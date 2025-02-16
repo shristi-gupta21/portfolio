@@ -6,6 +6,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import logoGyanDhan from '@/images/logos/gyandhan.svg'
 import logoPeopleLink from '@/images/logos/peoplelink.png'
 import logoFarAlpha from '@/images/logos/faralpha.jpeg'
+import logoAiseberg from '@/images/logos/aiseberg_logo.jpeg'
 
 interface Role {
   company: string
@@ -90,12 +91,22 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
+      company: 'Aiseberg',
+      title: 'Frontend Engineer',
+      logo: logoAiseberg,
+      start: 'January 2025',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
       company: 'FarAlpha Technologies',
       title: 'Software Developer',
       logo: logoFarAlpha,
       start: 'June 2024',
       end: {
-        label: 'Present',
+        label: 'January 2025',
         dateTime: new Date().getFullYear().toString(),
       },
     },

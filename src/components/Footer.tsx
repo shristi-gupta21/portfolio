@@ -33,7 +33,7 @@ export function Footer() {
                 <NavLink href="/skills">Skills</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; 2024 Shristi Gupta. All rights reserved.
+                &copy; 2025 Shristi Gupta. All rights reserved.
               </p>
             </div>
           </ContainerInner>
